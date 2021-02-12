@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/atheneumLogo.png" alt="" />
+      <nav>
+        <a href="#kleur">Kleuren</a>
+        <a href="#logo">Logo styling</a>
+        <a href="#fotos">Foto's</a>
+      </nav>
+    </header>
+    <main>
+      <section id="voorpagina">
+        <h1>Branding</h1>
+        <p>
+          Kleine branding samenvatting van het<br />
+          <span class="blauwVoorpagina">GO! Diksmuide </span>
+          <span class="rozeVoorpagina">Atheneum</span>
+        </p>
+      </section>
+
+      <section id="kleur">
+        <p>Kleuren</p>
+        <p style="color: #d6235b" onclick="roze()">Roze: #D6235B</p>
+        <p style="color: #00bfdb" onclick="blauw()">Lichtblauw: #00BFDB</p>
+        <p style="color: #b4c527" onclick="groen()">Lichtgroen: #B4C527</p>
+      </section>
+      <p style="transform: translateY(-70px)">
+        Klik op het kleur om de hexadecimale code te kopieren.
+      </p>
+
+      <section id="typografie">
+        <p>Typografie</p>
+        <p>Segoe UI</p>
+      </section>
+      <section id="logo">
+        <p class="titel">Logo Styling</p>
+        <div class="grid">
+          <div>
+            <p class="atheneum">Atheneum</p>
+            <p>Color: <span style="color: #d6235b">#D6235B</span></p>
+            <p>Line-spacing: -1px</p>
+            <p>Font-weight: semi-bold (600)</p>
+
+            <p class="diksmuide">GO! Diksmuide</p>
+            <p>Color: <span style="color: #00bfdb">#00BFDB</span></p>
+            <p>Line-spacing: -1px</p>
+            <p>Font-weight: semi-bold (600)</p>
+          </div>
+          <div class="inner-grid">
+            <div class="alfabeth">
+              <p>
+                ABCDEFGH<br />IJKLMNOP<br />
+                QRSTUVW<br />
+                XYZ.
+              </p>
+            </div>
+            <div class="groot">
+              <p>GO!</p>
+            </div>
+            <div class="nummers">0123456789.</div>
+          </div>
+        </div>
+      </section>
+      <section id="fotos">
+        <p class="titel">Foto's</p>
+        <p>Klik met de rechtermuisknop op een foto om de foto te downloaden.</p>
+        <img src="images/atheneumLogo.png" class="logo" alt="" />
+        <div>
+          <img src="images/kaderRoze.png" alt="" />
+          <img src="images/kaderBlauw.png" alt="" />
+          <img src="images/kaderGroen.png" alt="" />
+        </div>
+      </section>
+    </main>
+    <input type="text" name="" id="roze" value="#d6235b" />
+    <input type="text" name="" id="blauw" value="#00BFDB" />
+    <input type="text" name="" id="groen" value="#B4C527" />
+
+    <script>
+      function roze() {
+        var copyText = document.getElementById("roze");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("Gekopieerd: " + copyText.value);
+      }
+
+      function blauw() {
+        var copyText = document.getElementById("blauw");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("Gekopieerd: " + copyText.value);
+      }
+      function groen() {
+        var copyText = document.getElementById("groen");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        alert("Gekopieerd: " + copyText.value);
+      }
+    </script>
+  </body>
+</html>
